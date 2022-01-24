@@ -1,0 +1,521 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "openshift-sdn",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.22"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "openshift-sdn",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.22"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted
+    updateDate: 2022-01-24 05:46:48.314309499 +0000 UTC m=+295.280083074
+  creationTimestamp: "2022-01-24T05:46:48Z"
+  generateName: eap-infinispan-
+  labels:
+    app: infinispan-pod
+    clusterName: eap-infinispan
+    com.redhat.component-name: Data_Grid
+    com.redhat.component-type: application
+    com.redhat.component-version: 8.2.3
+    com.redhat.product-name: Red_Hat_Runtimes
+    com.redhat.product-version: 2022-Q1
+    controller-revision-hash: eap-infinispan-7866954445
+    infinispan_cr: eap-infinispan
+    statefulset.kubernetes.io/pod-name: eap-infinispan-0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:updateDate: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:clusterName: {}
+          f:com.redhat.component-name: {}
+          f:com.redhat.component-type: {}
+          f:com.redhat.component-version: {}
+          f:com.redhat.product-name: {}
+          f:com.redhat.product-version: {}
+          f:controller-revision-hash: {}
+          f:infinispan_cr: {}
+          f:statefulset.kubernetes.io/pod-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d686df9d-b608-4cfe-b1cf-fc49ff08e237"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"infinispan"}:
+            .: {}
+            f:env:
+              .: {}
+              k:{"name":"ADMIN_IDENTITIES_HASH"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ADMIN_IDENTITIES_PATH"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"CONFIG_HASH"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"CONFIG_PATH"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"DEFAULT_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"EXTRA_JAVA_OPTIONS"}:
+                .: {}
+                f:name: {}
+              k:{"name":"IDENTITIES_HASH"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IDENTITIES_PATH"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"JAVA_OPTIONS"}:
+                .: {}
+                f:name: {}
+              k:{"name":"MANAGED_ENV"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8888,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":11222,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":11223,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:startupProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/security/admin"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/security/user"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/opt/infinispan/server/data"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostname: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"admin-identities-volume"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"config-volume"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"data-volume"}:
+            .: {}
+            f:name: {}
+            f:persistentVolumeClaim:
+              .: {}
+              f:claimName: {}
+          k:{"name":"identities-volume"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2022-01-24T05:46:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2022-01-24T05:46:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    time: "2022-01-24T05:46:52Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.2.22"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    time: "2022-01-24T05:47:30Z"
+  name: eap-infinispan-0
+  namespace: eap
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: eap-infinispan
+    uid: d686df9d-b608-4cfe-b1cf-fc49ff08e237
+  resourceVersion: "1151386"
+  uid: b3fd2d39-c6bb-4341-ad5f-6db900020f9e
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app: infinispan-pod
+              clusterName: eap-infinispan
+              infinispan_cr: eap-infinispan
+          topologyKey: kubernetes.io/hostname
+        weight: 100
+  containers:
+  - env:
+    - name: CONFIG_PATH
+      value: /etc/config/infinispan.yaml
+    - name: MANAGED_ENV
+      value: "TRUE"
+    - name: JAVA_OPTIONS
+    - name: EXTRA_JAVA_OPTIONS
+    - name: DEFAULT_IMAGE
+      value: registry.redhat.io/datagrid/datagrid-8-rhel8@sha256:4d8057709958ef60bcabdcec52f05eae8df121fd3f4762c3218abca38130f638
+    - name: ADMIN_IDENTITIES_PATH
+      value: /etc/security/admin/identities.yaml
+    - name: IDENTITIES_PATH
+      value: /etc/security/user/identities.yaml
+    - name: CONFIG_HASH
+      value: 099f5093255eba7f644ad75a118525271830e637
+    - name: ADMIN_IDENTITIES_HASH
+      value: 8ca1083ed95040ba9b977473ad22d0db4c7514c7
+    - name: IDENTITIES_HASH
+      value: 6824d05e82e126a228218c39abab94ddd74de051
+    image: registry.redhat.io/datagrid/datagrid-8-rhel8@sha256:4d8057709958ef60bcabdcec52f05eae8df121fd3f4762c3218abca38130f638
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 5
+      httpGet:
+        path: rest/v2/cache-managers/default/health/status
+        port: 11223
+        scheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 80
+    name: infinispan
+    ports:
+    - containerPort: 11223
+      name: infinispan-adm
+      protocol: TCP
+    - containerPort: 8888
+      name: ping
+      protocol: TCP
+    - containerPort: 11222
+      name: infinispan
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 5
+      httpGet:
+        path: rest/v2/cache-managers/default/health/status
+        port: 11223
+        scheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 80
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 250m
+        memory: 512Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+      runAsUser: 1000660000
+    startupProbe:
+      failureThreshold: 60
+      httpGet:
+        path: rest/v2/cache-managers/default/health/status
+        port: 11223
+        scheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 80
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/config
+      name: config-volume
+    - mountPath: /opt/infinispan/server/data
+      name: data-volume
+    - mountPath: /etc/security/admin
+      name: admin-identities-volume
+    - mountPath: /etc/security/user
+      name: identities-volume
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-s4pr7
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: eap-infinispan-0
+  imagePullSecrets:
+  - name: default-dockercfg-cqwsq
+  nodeName: worker-1.rhdgcluster.lab.upshift.rdu2.redhat.com
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000660000
+    seLinuxOptions:
+      level: s0:c26,c5
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: data-volume
+    persistentVolumeClaim:
+      claimName: data-volume-eap-infinispan-0
+  - configMap:
+      defaultMode: 420
+      name: eap-infinispan-configuration
+    name: config-volume
+  - name: admin-identities-volume
+    secret:
+      defaultMode: 420
+      secretName: eap-infinispan-generated-operator-secret
+  - name: identities-volume
+    secret:
+      defaultMode: 420
+      secretName: eap-infinispan-generated-secret
+  - name: kube-api-access-s4pr7
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2022-01-24T05:46:50Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2022-01-24T05:47:30Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2022-01-24T05:47:30Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2022-01-24T05:46:50Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://32115424ba616fc788d45f0eb1eebd4fb15c431bc79822addd77a5db2bad9e6a
+    image: registry.redhat.io/datagrid/datagrid-8-rhel8@sha256:4d8057709958ef60bcabdcec52f05eae8df121fd3f4762c3218abca38130f638
+    imageID: registry.redhat.io/datagrid/datagrid-8-rhel8@sha256:1a4836010f017a7fefa4278cee78b8de5fd031e211e31459493c65a6bb24327d
+    lastState: {}
+    name: infinispan
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2022-01-24T05:47:05Z"
+  hostIP: 10.0.89.114
+  phase: Running
+  podIP: 10.129.2.22
+  podIPs:
+  - ip: 10.129.2.22
+  qosClass: Burstable
+  startTime: "2022-01-24T05:46:50Z"
